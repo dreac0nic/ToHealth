@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 20151111010451) do
   create_table "answers", force: :cascade do |t|
     t.integer  "numAnswer"
     t.string   "openAnswer"
-    t.integer  "user_id",        null: false
-    t.integer  "question_id",    null: false
+    t.integer  "user_id_id"
+    t.integer  "question_id_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
@@ -35,21 +35,18 @@ ActiveRecord::Schema.define(version: 20151111010451) do
     t.integer  "estTime"
     t.text     "description"
     t.integer  "priority"
+    t.integer  "user_id_id",  null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "userName",   null: false
-    t.string   "firstName",  null: false
-    t.string   "lastName",   null: false
-    t.string   "password",   null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "userName",        null: false
+    t.string   "firstName",       null: false
+    t.string   "lastName",        null: false
+    t.string   "password_digest", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
-
-  add_foreign_key "answers", "questions", name: "answers_ibfk_2", on_delete: :cascade
-  add_foreign_key "answers", "users", name: "answers_ibfk_1", on_delete: :cascade
-  add_foreign_key "tasks", "users", name: "tasks_ibfk_1", on_delete: :cascade
 
 end
