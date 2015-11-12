@@ -1,3 +1,86 @@
 // Place all the styles related to the todo controller here.
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// You can use Sass (SCSS) here: http://sass-lang.com
+
+body {
+    background: rgba(138,181,229,1);
+    background: -moz-linear-gradient(left, rgba(138,181,229,1) 0%, rgba(85,158,241,1) 27%, rgba(92,158,240,1) 57%, rgba(77,148,224,1) 78%, rgba(77,148,224,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(138,181,229,1)), color-stop(27%, rgba(85,158,241,1)), color-stop(57%, rgba(92,158,240,1)), color-stop(78%, rgba(77,148,224,1)), color-stop(100%, rgba(77,148,224,1)));
+    background: -webkit-linear-gradient(left, rgba(138,181,229,1) 0%, rgba(85,158,241,1) 27%, rgba(92,158,240,1) 57%, rgba(77,148,224,1) 78%, rgba(77,148,224,1) 100%);
+    background: -o-linear-gradient(left, rgba(138,181,229,1) 0%, rgba(85,158,241,1) 27%, rgba(92,158,240,1) 57%, rgba(77,148,224,1) 78%, rgba(77,148,224,1) 100%);
+    background: -ms-linear-gradient(left, rgba(138,181,229,1) 0%, rgba(85,158,241,1) 27%, rgba(92,158,240,1) 57%, rgba(77,148,224,1) 78%, rgba(77,148,224,1) 100%);
+    background: linear-gradient(to right, rgba(138,181,229,1) 0%, rgba(85,158,241,1) 27%, rgba(92,158,240,1) 57%, rgba(77,148,224,1) 78%, rgba(77,148,224,1) 100%);
+}
+
+html {
+
+}
+
+div#menu {
+    //display: none;
+    top: -20px;
+    right: -20px;
+}
+
+div#todoarea {
+
+}
+
+.editor { 
+    position:relative 
+}
+
+.editor .field {
+	width:300px; 
+    background:#EC6603; 
+    color:#fff; 
+    padding:5px; 
+    border:none; 
+    cursor:pointer;
+	font-family:'lucida sans unicode',sans-serif; 
+    font-size:1em;
+	border:solid 1px #EC6603;
+	-webkit-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+
+.editor .field:hover {
+	border:solid 1px #fff;
+	-moz-box-shadow:0 0 5px #999; 
+    -webkit-box-shadow:0 0 5px #999; 
+    box-shadow:0 0 5px #999
+}
+
+.editor>ul.list { 
+    display:none;
+	position:absolute; 
+    left:30px; 
+    top:-30px; 
+    z-index:999;
+	width:300px;
+	margin:0; 
+    padding:10px; 
+    list-style:none;
+	background:#fff; 
+    color:#333;
+	-moz-border-radius:5px; 
+    -webkit-border-radius:5px; 
+    border-radius:5px;
+	-moz-box-shadow:0 0 5px #999; 
+    -webkit-box-shadow:0 0 5px #999; 
+    box-shadow:0 0 5px #999
+}
+
+.editor>ul.list li {
+	padding:10px;
+	border-bottom: solid 1px #ccc;
+}
+
+.editor>ul.list li:hover {
+	background:#EC6603; 
+    color:#fff;
+}
+
+.editor>ul.list li:last-child { 
+    border:none 
+}

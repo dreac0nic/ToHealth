@@ -10,6 +10,9 @@ class TodoController < ApplicationController
         @todo = Todo.create( todo_params )
     end
 
+    def destroy
+    end
+
     private
 
     def all_todos
