@@ -1,5 +1,6 @@
 class TodoController < ApplicationController
     before_action :all_todos, only: [ :index, :create ]
+    before_action :require_user, only: [:index, :show]
     respond_to :html, :js
 
     def new

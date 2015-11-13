@@ -9,6 +9,33 @@
         <%= csrf_meta_tags %>
     </head>
     <body>
+        <div class="header">
+            <div class="container">
+                <%= link_to root_path do %>
+                <% end %>
+                <div class="nav pull-right">
+                    <% if current_user %> 
+                    <ul> 
+                        <li>
+                            <%= current_user.userName %>
+                        </li> 
+                        <li>
+                            <%= link_to "Log out", logout_path, method: "delete" %>
+                        </li> 
+                    </ul> 
+                    <% else %> 
+                    <ul> 
+                        <li>
+                            <%= link_to "Login", 'login' %>
+                        </li> 
+                        <li>
+                            <%= link_to "Signup", 'signup' %>
+                        </li> 
+                    </ul> 
+                    <% end %>
+                </div>
+            </div>
+        </div>
         <%= yield %>
     </body>
 </html>

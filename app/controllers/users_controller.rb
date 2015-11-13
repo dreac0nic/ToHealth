@@ -1,31 +1,31 @@
-class LoginController < ApplicationController
+class UsersController < ApplicationController
 
   def index
-    @login = User.all
+    @users = User.all
   end
 
   def show
   end
 
   def new
-    @login = User.new
-  end
-
-  def edit
+    @user = User.new
   end
 
   def create
-    @login = User.new(userParams)
-    if @login.save
-      session[:user_id] = @login.id
+    @user = User.new(user_params)
+    if @user.save
+      session[:user_id] = @user.id
       redirect_to '/'
     else
       redirect_to '/signup'
     end
   end
 
+  def edit
+  end
+
   private
-  def userParams
+  def user_params
     params.require(:user).permit(:userName, :firstName, :lastName, :password)
   end
 
