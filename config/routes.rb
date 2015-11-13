@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
-    root 'login#index'
 
+    root 'todo#index'    
+    
+    get 'signup' => 'users#new'
+    get 'todo' => 'todo#index'
+    get 'login' => 'sessions#new'
     get 'todo/:id' , to: 'todo#index'
-  
-    resources :todo, :health, :login
+ 
+    post 'login' => 'sessions#create'
+
+    delete 'logout' => 'sessions#destroy'
+ 
+    resources :todo, :health, :login, :users
 end
