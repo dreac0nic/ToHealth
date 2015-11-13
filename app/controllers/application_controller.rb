@@ -9,8 +9,26 @@ class ApplicationController < ActionController::Base
         @current_user ||= User.find(session[:user_id]) if session[:user_id]
     end
 
+<<<<<<< HEAD
     def require_user
         redirect_to '/login' unless current_user
     end
+=======
+  def current_user
+    @current_user ||= User.find(session[:user_id_id]) if session[:user_id_id]
+  end
+
+  def require_user
+    redirect_to '/login' unless current_user
+  end
+>>>>>>> origin/Authorization
+
+  def require_teacher
+    redirect_to '/todo' unless current_user.teacher?
+  end
+
+  def require_admin
+    redirect_to '/todo' unless current_user.admin?
+  end
 
 end

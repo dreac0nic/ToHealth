@@ -3,9 +3,14 @@ class TodoController < ApplicationController
     before_action :require_user, only: [:index, :show]
     respond_to :html, :js
 
+<<<<<<< HEAD
     def new
         @todo = Todo.new
     end
+=======
+  before_action :require_user, only: [:index, :show]
+  before_action :require_admin, only: [:show_all]
+>>>>>>> origin/Authorization
 
     def create
         @todo = Todo.create( todo_params )
@@ -14,6 +19,7 @@ class TodoController < ApplicationController
     def destroy
     end
 
+<<<<<<< HEAD
     private
 
     def all_todos
@@ -23,4 +29,10 @@ class TodoController < ApplicationController
     def todo_params
         params.require( :todo ).permit( :name )
     end
+=======
+  def show_all
+    
+  end
+
+>>>>>>> origin/Authorization
 end

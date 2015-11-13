@@ -1,10 +1,13 @@
 class UsersController < ApplicationController
 
+  before_action :require_admin, only: [:index, :edit, :show]
+ 
   def index
     @users = User.all
   end
 
   def show
+    @user = User.find(params[:id])
   end
 
   def new
@@ -14,8 +17,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      session[:user_id] = @user.id
-      redirect_to '/'
+      session[:user_id_id] = @user.id
+      redirect_to '/todo'
     else
       redirect_to '/signup'
     end
