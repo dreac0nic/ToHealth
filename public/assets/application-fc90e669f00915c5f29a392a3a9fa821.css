@@ -1,6 +1,3 @@
-// Place all the styles related to the Sessions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 
 dy {
   background: #fff;
@@ -51,6 +48,7 @@ dy {
 
 /* FORM PAGES */
 
+
 .form {
   text-align:center;
   margin: 0 auto 10px;
@@ -80,3 +78,4 @@ input[type=password] {
   border: 0;
   margin-top: 6px;
 }
+
