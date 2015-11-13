@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-    root 'todo#index'    
+    root 'sessions#new'    
     
     get 'signup' => 'users#new'
     get 'todo' => 'todo#index'
