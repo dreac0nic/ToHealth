@@ -3,18 +3,11 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $ ->
-    $('.field').click ->
-        $('.list').fadeIn 350
-
-        $(document).keyup (e) ->
-            if e.keyCode == 27
-                $('.list').fadeOut 350
-            return
-
-        $('.list li').click ->
-            $('.list').fadeOut 350
-            return
-
-        $(document).one ->
-            $('.list').fadeOut 350
-            return
+    $('.field').click (e) ->
+        $.ajax '/todo/new',
+            type: 'GET'
+            dataType: 'html'
+            error: (jqXHR, textStatus, errorThrown) ->
+                alert "AJAX Error: #{textStatus}"
+            success: (data, textStatus, jqXHR) ->
+                $('#formarea').append data

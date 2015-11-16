@@ -13,17 +13,20 @@ div#menu {
 }
 
 div#menu .field {
-	width: 300px; 
+	width: 90px; 
+    height: 90px;
     background: #EC6603; 
     color: #fff; 
-    padding: 5px; 
-    border: none; 
     cursor: pointer;
 	font-family: 'lucida sans unicode',sans-serif; 
-    font-size: 1em;
-	border: solid 1px #EC6603;
+    font-size: 18pt;
+	border: solid 1px #000000;
+    border-radius: 90px;
 	-webkit-transition: all .4s ease-in-out;
-	transition: all .4s ease-in-out;
+	transition: all .3s ease-in-out;
+    text-align: center;
+    margin: auto;
+    text-indent: 0px;
 }
 
 div#menu .field:hover {
@@ -31,38 +34,4 @@ div#menu .field:hover {
 	-moz-box-shadow: 0 0 5px #999; 
     -webkit-box-shadow: 0 0 5px #999; 
     box-shadow: 0 0 5px #999
-}
-
-div#menu>ul.list { 
-    display: none;
-	position: absolute; 
-    left: 30px; 
-    bottom: 30px; 
-    z-index: 999;
-	width: 300px;
-	margin: 0; 
-    padding: 10px; 
-    list-style: none;
-	background: #fff; 
-    color: #333;
-	-moz-border-radius: 5px; 
-    -webkit-border-radius: 5px; 
-    border-radius: 5px;
-	-moz-box-shadow: 0 0 5px #999; 
-    -webkit-box-shadow: 0 0 5px #999; 
-    box-shadow: 0 0 5px #999
-}
-
-div#menu>ul.list li {
-	padding: 10px;
-	border-bottom: solid 1px #ccc;
-}
-
-div#menu>ul.list li:hover {
-	background: #EC6603; 
-    color: #fff;
-}
-
-div#menu>ul.list li:last-child { 
-    border: none 
 }

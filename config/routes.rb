@@ -5,9 +5,6 @@ Rails.application.routes.draw do
     get 'signup' => 'users#new'
 
     get 'todo' => 'todo#show'
-    get 'todo/:id' , to: 'todo#show'
-
-    post 'todo/create' => 'todo#create'
 #    get 'todo/index' => 'todo#index' # Admin Only
     
     get 'health' => 'health#index'

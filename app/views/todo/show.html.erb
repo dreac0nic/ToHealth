@@ -4,21 +4,15 @@
 <body>
     <div id="Testaclese" style="visibility: hidden;">
         <span>
-            DEATH
+            DONE
         </span>
     </div>
     <div id="todoarea">
 
     </div>
     <div id="menu" class="editor">
-        <input type="text" name="add" value="Edit" class="field" readonly="readonly" />
-        <ul class="list">
-            <li>
-                <%= link_to 'New ToDo', controller: "todo", method: :post, remote: true %>
-            </li>
-            <li>
-                <%= link_to 'Delete Todo', 'todo#destroy', remote: true %>
-            </li>
-        </ul>
+        <input type="text" name="adder" value="New" class="field" readonly="readonly" />
+    </div>
+    <div id="formarea" style="display: none">
     </div>
 </body>

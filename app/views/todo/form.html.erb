@@ -1,4 +1,4 @@
-<%= for_for( @todo, remote: true ) do |f| %>
+<%= form_for( @todo, remote: true ) do |f| %>
     <ul>
         <li>
             <div>
@@ -52,6 +52,11 @@
             <br>
             <div>
                 <%= f.number_field( in: 1...100, step: 1 ) %>
+            </div>
+        </li>
+        <li>
+            <div>
+                <%= f.submit %>
             </div>
         </li>
     </ul>
