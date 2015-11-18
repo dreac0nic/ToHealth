@@ -3,13 +3,13 @@ class HealthController < ApplicationController
   before_action :require_admin, only:[:edit_questions]
 
   def index
-#    @answers = Answer.where(:user_id => @user_id)
+#    @answers = Answer.where(session[:user_id_id])#(:user_id => @user_id)
     @questions = Question.all
   end
 
   def show
     @question = Question.find(params[:id])
-#    @answer = Answer.where(:user_id => @user_id)
+#    @answer = Answer.where(session[:user_id_id])
   end
 
   def edit_questions
