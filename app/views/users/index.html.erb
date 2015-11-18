@@ -1,0 +1,28 @@
+<div class="header">
+  <div class="container">
+    <h1>Users</h1>
+  </div>
+</div>
+
+<div class="tags">
+  <div class="container">
+    <div class="cards row">
+      <table width="500" cellspacing="5" text-align="left">
+        <tr>
+        <th align="left">User Name</th>
+        <th align="left">First Name</th>
+        <th align="left">Last Name</th>
+        <th align="left">Role</th>
+        </tr>
+      <% @users.each do |u| %>
+	<tr>
+	<td><%= u.userName %></td>
+	<td><%= u.firstName %></td>
+	<td><%= u.lastName %></td>
+	<td><%= u.role %></td>
+	</tr>
+      <% end %>
+      </table>
+    </div>
+  </div>
+</div>
