@@ -20,7 +20,13 @@
   <tbody>
     <% @answers.each do |answer| %>
       <tr>
-        <td><%= answer.numAnswer + " Hours"%><td>
+        <td><%= answer.sleepAnswer + " Hours"%><td>
+        <td><%= answer.mealsAnswer + " Meals"%><td>
+        <td><%= answer.fruitAndVegAnswer #needs to be adjusted for the bool answer%><td>
+        <td><%= answer.stressAnswer%><td>
+        <td><%= answer.bibleAnswer%><td>
+        <td><%= answer.prayerAnswer%><td>
+        <td><%= answer.goalsAnswer%><td>
       </tr>
     <% end %>
   </tbody>
