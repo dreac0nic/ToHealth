@@ -1,0 +1,66 @@
+<%= form_for( Todo.new, remote: true ) do |f| %>
+    <ul>
+        <li>
+            <div>
+                <%= f.label :name, "Title:" %>
+            </div>
+            <br />
+            <div>
+                <%= f.text_field :name %>
+            </div>
+        </li>
+        <li>
+            <div>
+                <%= f.label :course, "Class:" %>
+            </div>
+            <br />
+            <div>
+                <%= f.text_field :course %>
+            </div>
+        </li>
+        <li>
+            <div>
+                <%= f.label :dueDate, "Due Date:" %>
+            </div>
+            <br />
+            <div>
+                <%= f.text_field :dueDate %>
+            </div>
+        </li>
+        <li>
+            <div>
+                <%= f.label :estTime, "Extimated Completion Time:" %>
+            </div>
+            <br />
+            <div>
+                <%= f.number_field :estTime %>
+            </div>
+        </li>
+        <li>
+            <div>
+                <%= f.label :description, "Description:" %>
+            </div>
+            <br />
+            <div>
+                <%= f.text_area :description %>
+            </div>
+        </li>
+        <li>
+            <div>
+                <%= f.label :priority, "Priority:" %>
+            </div>
+            <br />
+            <div>
+                <%= number_field_tag 'priority', in: 1...100, step: 1 %>
+            </div>
+        </li>
+        <li>
+            <div>
+                <%= f.submit %>
+            </div>
+        </li>
+    </ul>
+    <div id="exitNew">
+        <input type="text" name="canceler" value="Cancel" class="exit" readonly="readonly" />
+    </div>
+<% end %>

@@ -4,10 +4,13 @@
 
 $ ->
     $('.field').click (e) ->
-        $.ajax '/todo/new',
-            type: 'GET'
-            dataType: 'html'
-            error: (jqXHR, textStatus, errorThrown) ->
-                alert "AJAX Error: #{textStatus}"
-            success: (data, textStatus, jqXHR) ->
+        $.ajax
+            method: "GET"
+            url: "/todo/new"
+            accepts:
+                html: "text/html"
+            success: ( data, status, xhr ) ->
                 $('#formarea').append data
+                $('#formarea').show()
+            error: ( xhr, status, errorThrown ) ->
+                alert "AJAX Error: #{status}; #{errorThrown}"

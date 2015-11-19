@@ -17,5 +17,5 @@ Rails.application.routes.draw do
 
     delete 'logout' => 'sessions#destroy'
  
-    resources :todo, :health, :login, :users
+    resources :todo, :health, :login, :users, :todos
 end
