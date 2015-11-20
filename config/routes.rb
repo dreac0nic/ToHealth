@@ -4,8 +4,9 @@ Rails.application.routes.draw do
     
     get 'signup' => 'users#new'
 
-    get 'todo' => 'todo#show'
-    post 'todo/create' => 'todo#create'
+    get 'todos' => 'todos#show'
+    get 'todos/new' => 'todos#new'
+    post 'todos/create' => 'todos#create'
 #    get 'todo/index' => 'todo#index' # Admin Only
     
     get 'health' => 'health#index'
@@ -18,5 +19,5 @@ Rails.application.routes.draw do
 
     delete 'logout' => 'sessions#destroy'
  
-    resources :todo, :health, :login, :users, :todos
+    resources :todo, :health, :login, :users
 end

@@ -8,7 +8,13 @@
         </span>
     </div>
     <div id="todoarea">
-
+        <ul id='todos'>
+            <% if defined? @todos %>
+                <% @todos.each do |todo| %>
+                    <%= render :partial => "todos/create", :locals => { :todo => todo } %>
+                <% end %>
+            <% end %>
+        </ul>
     </div>
     <div id="menu" class="editor">
         <input type="text" name="adder" value="New" class="field" readonly="readonly" />

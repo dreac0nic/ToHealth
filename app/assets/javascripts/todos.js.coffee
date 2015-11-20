@@ -8,7 +8,7 @@ $(document).on 'ready', ->
     newAjax = ->
         $.ajax
             method: 'GET'
-            url: 'todo/new'
+            url: 'todos/new'
             accepts: html: 'text/html'
             success: (data, status, xhr) ->
                 $('#formarea').append data.trim()
@@ -16,7 +16,7 @@ $(document).on 'ready', ->
                 $('.field').val 'Exit'
                 return
             error: (xhr, status, error) ->
-                alert "AJAX Error: #{status} ; #{status}"
+                alert "AJAX Error: #{status} ; #{error}"
                 return
         return
 

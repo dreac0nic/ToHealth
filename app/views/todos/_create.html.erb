@@ -1,0 +1,27 @@
+<li class="todo">
+    <div class="todotitle">
+        <span class="t_title">
+            <%= todo.name %>
+        </span>
+    </div>
+    <% if todo.course? %>
+        <div class="todoseperator">
+            <span class="t_seper">|</span>
+        </div>
+        <div class="todocourse">
+            <span class="t_course">
+                <%= todo.course %>
+            </span>
+        </div>
+    <% end %>
+    <% if todo.dueDate? %>
+        <div class="todoseperator">
+            <span class="t_seper">|</span>
+        </div>
+        <div class="tododue">
+            <span class="t_due">
+                <%= todo.dueDate %>
+            </span>
+        </div>
+    <% end %>
+</li>
