@@ -1,3 +1,82 @@
 // Place all the styles related to the todo controller here.
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// You can use Sass (SCSS) here: http://sass-lang.com
+
+div#todoarea {
+
+}
+
+div#menu { 
+    position: fixed; 
+    bottom: 30px;
+    right: 30px;
+}
+
+div#menu .field {
+	width: 90px; 
+    height: 90px;
+    background: #EC6603; 
+    color: #000; 
+    cursor: pointer;
+	font-family: 'lucida sans unicode',sans-serif; 
+    font-size: 18pt;
+	border: solid 1px #000000;
+    border-radius: 90px;
+	-webkit-transition: all .4s ease-in-out;
+	transition: all .3s ease-in-out;
+    text-align: center;
+    margin: auto;
+    text-indent: 0px;
+}
+
+div#menu .field:hover {
+	border: solid 1px #fff;
+	-moz-box-shadow: 0 0 5px #999; 
+    -webkit-box-shadow: 0 0 5px #999; 
+    box-shadow: 0 0 5px #999;
+    color: #fff; 
+}
+
+div#formarea {
+    position: absolute;
+    width: 350px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    margin-top: -325px;
+    margin-left: -175px;
+    background: #FFF;
+    border: 2px solid black;
+    border-radius: 4px;
+    display: none;
+}
+
+div#formarea ul {
+    list-style-type: none;
+}
+
+div#formarea ul li {
+    width: 80%;
+}
+
+div#exitNew {
+    float: right;
+    width: 74px;
+    height: 35px;
+    text-align: center;
+    bottom: 0;
+    margin: 15px 15px 0 0;
+}
+
+div#exitNew input[name=canceler] {
+    width: 74px;
+    height: 35px;
+    text-indent: 0px;
+    text-align: center;
+	font-family: 'lucida sans unicode',sans-serif; 
+    font-size: 14pt;
+}
+
+ul#newForm li {
+    margin: 5px 0 5px 0;
+}
