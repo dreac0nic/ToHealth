@@ -10,7 +10,7 @@ class CreateAnswers < ActiveRecord::Migration
       t.integer :exerciseAnswer
       t.integer :goalsAnswer
       t.references :user_id
-      t.references :question_id
+      #t.references :question_id
 
       t.timestamps null: false
     end
