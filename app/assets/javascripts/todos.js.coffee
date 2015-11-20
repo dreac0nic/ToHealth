@@ -14,6 +14,7 @@ $(document).on 'ready', ->
                 $('#formarea').append data.trim()
                 $('#formarea').show()
                 $('.field').val 'Exit'
+                $('#new_todo').on 'submit', formAjax
                 return
             error: (xhr, status, error) ->
                 alert "AJAX Error: #{status} ; #{error}"
@@ -24,6 +25,30 @@ $(document).on 'ready', ->
         $('#formarea').html ''
         $('.field').val 'New'
         $('#formarea').hide()
+        return
+
+    
+    bindAjax = ->
+        $('ul.todos').append data
+        hideForm()
+        pressed = false
+        return
+
+    formAjax = ->
+        data = $('#new_todo').serialize();
+        $.ajax
+            method: 'POST'
+            url: 'todos/create'
+            data: data
+            accepts: html: 'text/html'
+            success: (data, status, xhr) ->
+                $('#todos').append data.trim()
+                hideForm()
+                pressed = false
+                return
+            error: (xhr, status, error) ->
+                alert "AJAX Error: #{status} ; #{error}"
+                return
         return
 
     $('.field').on 'click', (e) ->

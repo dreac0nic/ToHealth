@@ -4,10 +4,18 @@ class TodosController < ApplicationController
     respond_to :html, :js
 
     def create
+        date = nil
+        if params[ :todo ][ :dueDate ] != ""
+            date = Date.strptime( params[ :todo ][ :dueDate ], "%m/%d/%Y" )
+        else
+            date = nil
+        end
+            
+
         @todo = Todo.new( {
             name: params[ :todo ][ :name ],
             course: params[ :todo ][ :course ],
-            dueDate: Date.strptime(params[ :todo ][ :dueDate ], "%m/%d/%Y"),
+            dueDate: date,
             estTime: params[ :todo ][ :estTime ],
             description: params[ :todo ][ :description ],
             priority: params[ :todo ][ :priority ],
@@ -17,10 +25,10 @@ class TodosController < ApplicationController
         respond_to do |format|
             if @todo.save
                 format.html {
-                    render :layout => nil
+                    render :partial => "todos/create", :locals => { :todo => @todo }, :layout => false
                 }
                 format.js {
-                    render :layout => nil
+                    render :partial => "todos/create", :locals => { :todo => @todo }, :layout => false
                 }
             end
         end
