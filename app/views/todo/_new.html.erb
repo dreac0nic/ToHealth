@@ -1,66 +1,57 @@
-<%= form_for( Todo.new, remote: true ) do |f| %>
-    <ul>
+<%= form_for( @todo, url: "todo/create", remote: true ) do |f| %>
+    <ul id="newForm">
         <li>
-            <div>
+            <div class='lbl'>
                 <%= f.label :name, "Title:" %>
             </div>
-            <br />
-            <div>
+            <div class='txt'>
                 <%= f.text_field :name %>
             </div>
         </li>
         <li>
-            <div>
+            <div class='lbl'>
                 <%= f.label :course, "Class:" %>
             </div>
-            <br />
-            <div>
+            <div class='txt'>
                 <%= f.text_field :course %>
             </div>
         </li>
         <li>
-            <div>
+            <div class='lbl'>
                 <%= f.label :dueDate, "Due Date:" %>
             </div>
-            <br />
-            <div>
+            <div class='txt'>
                 <%= f.text_field :dueDate %>
             </div>
         </li>
         <li>
-            <div>
+            <div class='lbl'>
                 <%= f.label :estTime, "Extimated Completion Time:" %>
             </div>
-            <br />
-            <div>
+            <div class='numfld'>
                 <%= f.number_field :estTime %>
             </div>
         </li>
         <li>
-            <div>
+            <div class='lbl'>
                 <%= f.label :description, "Description:" %>
             </div>
-            <br />
-            <div>
+            <div class='txtfld'>
                 <%= f.text_area :description %>
             </div>
         </li>
         <li>
-            <div>
+            <div class='lbl'>
                 <%= f.label :priority, "Priority:" %>
             </div>
-            <br />
-            <div>
+            <div class='numfld'>
                 <%= number_field_tag 'priority', in: 1...100, step: 1 %>
             </div>
         </li>
         <li>
-            <div>
+            <div class='.subbtn'>
                 <%= f.submit %>
             </div>
         </li>
     </ul>
-    <div id="exitNew">
-        <input type="text" name="canceler" value="Cancel" class="exit" readonly="readonly" />
-    </div>
 <% end %>
