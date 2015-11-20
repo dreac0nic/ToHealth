@@ -43,10 +43,7 @@
     <%= f.label :goalsAnswer %><br>
     <%= f.number_field :goalsAnswer %>
   </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
+  <% :user_id = session[:user_id_id] %>
   <div class="actions">
     <%= f.submit %>
   </div>

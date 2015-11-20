@@ -1,0 +1,57 @@
+<%= form_for( @todo, url: "todo/create", remote: true ) do |f| %>
+    <ul id="newForm">
+        <li>
+            <div class='lbl'>
+                <%= f.label :name, "Title:" %>
+            </div>
+            <div class='txt'>
+                <%= f.text_field :name %>
+            </div>
+        </li>
+        <li>
+            <div class='lbl'>
+                <%= f.label :course, "Class:" %>
+            </div>
+            <div class='txt'>
+                <%= f.text_field :course %>
+            </div>
+        </li>
+        <li>
+            <div class='lbl'>
+                <%= f.label :dueDate, "Due Date:" %>
+            </div>
+            <div class='txt'>
+                <%= f.text_field :dueDate %>
+            </div>
+        </li>
+        <li>
+            <div class='lbl'>
+                <%= f.label :estTime, "Extimated Completion Time:" %>
+            </div>
+            <div class='numfld'>
+                <%= f.number_field :estTime %>
+            </div>
+        </li>
+        <li>
+            <div class='lbl'>
+                <%= f.label :description, "Description:" %>
+            </div>
+            <div class='txtfld'>
+                <%= f.text_area :description %>
+            </div>
+        </li>
+        <li>
+            <div class='lbl'>
+                <%= f.label :priority, "Priority:" %>
+            </div>
+            <div class='numfld'>
+                <%= number_field_tag 'priority', in: 1...100, step: 1 %>
+            </div>
+        </li>
+        <li>
+            <div class='.subbtn'>
+                <%= f.submit %>
+            </div>
+        </li>
+    </ul>
+<% end %>

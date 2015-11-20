@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
 <head>
   <title>ToHealth</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -33,4 +34,44 @@
 <%= yield %>
 
 </body>
+=======
+    <head>
+        <title>
+            <%= yield( :title ) %>
+        </title>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+    </head>
+    <body>
+        <div class="header">
+            <div class="container">
+                <%= link_to root_path do %>
+                <% end %>
+                <div class="nav pull-right">
+                    <% if current_user %> 
+                    <ul> 
+                        <li>
+                            <%= current_user.userName %>
+                        </li> 
+                        <li>
+                            <%= link_to "Log out", logout_path, method: "delete" %>
+                        </li> 
+                    </ul> 
+                    <% else %> 
+                    <ul> 
+                        <li>
+                            <%= link_to "Login", 'login' %>
+                        </li> 
+                        <li>
+                            <%= link_to "Signup", 'signup' %>
+                        </li> 
+                    </ul> 
+                    <% end %>
+                </div>
+            </div>
+        </div>
+        <%= yield %>
+    </body>
+>>>>>>> 97ca803a498ca4aacdd7c3bd38d1cc638042c156
 </html>
