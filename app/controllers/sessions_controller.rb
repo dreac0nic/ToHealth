@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
 
+  before_action :redirect_on_logged_in
+
   def new
   end
 
