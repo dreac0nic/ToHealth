@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
-    root 'sessions#new'    
-    
+    root 'todos#show'    
+#    root 'sessions#new'
+  
     get 'signup' => 'users#new'
 
     get 'todos' => 'todos#show'

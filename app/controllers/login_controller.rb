@@ -1,5 +1,7 @@
 class LoginController < ApplicationController
 
+  before_action :redirect_on_logged_in
+
   def index
     @login = User.all
   end
