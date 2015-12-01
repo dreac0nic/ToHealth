@@ -6,19 +6,19 @@ div#todoarea {
 
 }
 
-div#menu { 
-    position: fixed; 
+div#menu {
+    position: fixed;
     bottom: 30px;
     right: 30px;
 }
 
 div#menu .field {
-	width: 90px; 
+	width: 90px;
     height: 90px;
-    background: #EC6603; 
-    color: #000; 
+    background: #EC6603;
+    color: #000;
     cursor: pointer;
-	font-family: 'lucida sans unicode',sans-serif; 
+	font-family: 'lucida sans unicode',sans-serif;
     font-size: 18pt;
 	border: solid 1px #000000;
     border-radius: 90px;
@@ -31,10 +31,10 @@ div#menu .field {
 
 div#menu .field:hover {
 	border: solid 1px #fff;
-	-moz-box-shadow: 0 0 5px #999; 
-    -webkit-box-shadow: 0 0 5px #999; 
+	-moz-box-shadow: 0 0 5px #999;
+    -webkit-box-shadow: 0 0 5px #999;
     box-shadow: 0 0 5px #999;
-    color: #fff; 
+    color: #fff;
 }
 
 div#formarea {
@@ -73,7 +73,7 @@ div#exitNew input[name=canceler] {
     height: 35px;
     text-indent: 0px;
     text-align: center;
-	font-family: 'lucida sans unicode',sans-serif; 
+	font-family: 'lucida sans unicode',sans-serif;
     font-size: 14pt;
 }
 
@@ -81,12 +81,17 @@ ul#newForm li {
     margin: 5px 0 5px 0;
 }
 
-div#numfld { 
+div#numfld {
     margin: 10px 0 0 0;
 }
 
 div#txtfld {
     margin: 10px 0 0 0;
+}
+
+ul.todos {
+  list-style-type: none;
+  padding: 2px 4px;
 }
 
 li.todo {
@@ -104,7 +109,7 @@ div[class^=todo] {
 
 div[class^=todo] span {
     text-indent: 0px;
-	font-family: 'lucida sans unicode',sans-serif; 
+	font-family: 'lucida sans unicode',sans-serif;
     font-size: 10pt;
     width: 100%;
 }
